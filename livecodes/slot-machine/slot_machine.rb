@@ -1,5 +1,5 @@
 class SlotMachine
-  ITEMS = %w[🤩 ⭐️ 🛎 7️⃣ 🍒].reverse
+  ITEMS = %w[🍒 7️⃣ 🛎 ⭐️ 🤩]
 
   def initialize(reels = %w[🤩 🤩 🤩])
     @reels = reels
@@ -9,8 +9,8 @@ class SlotMachine
     60.times do
       shuffle_reels
       print @reels.join("\t") + "\r"
-      # \r return carriage
-      $stdout.flush
+      # \r is the 'return carriage' character to return to the beginning of the line
+      $stdout.flush # clears the line in the terminal
       sleep(0.03)
     end
     sleep(0.5)
