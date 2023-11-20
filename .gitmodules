@@ -1,0 +1,4 @@
+[submodule "lectures/slack-chat"]
+	path = lectures/slack-chat
+	url = git@github.com:trouni/rails-action-cable-chat.git
+	branch = 1388
